@@ -19,6 +19,7 @@ namespace CowboyWebAPI.Controllers
     [ApiController]
     public class CowboyDetailsController : ControllerBase
     {
+        private readonly DataContext _context;
         ICowboyService _cowboyService;
 
         public CowboyDetailsController(ICowboyService cowboyService)
