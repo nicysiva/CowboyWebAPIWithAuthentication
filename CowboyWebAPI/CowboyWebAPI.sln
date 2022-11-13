@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CowboyWebAPI", "CowboyWebAPI.csproj", "{278A2E93-E269-4B88-81A6-A5BC65FD59AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CowboyWebAPITest", "..\CowboyWebAPITest\CowboyWebAPITest.csproj", "{3366DF2D-FE9B-47A6-BFCC-1D428E254B0E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Postman", "Postman", "{0FDE962A-835A-407E-A3E3-C61165C1AF04}"
+	ProjectSection(SolutionItems) = preProject
+		..\Postman\Cowboy Challenge.postman_collection.json = ..\Postman\Cowboy Challenge.postman_collection.json
+		..\Postman\Cowboy Challenge.postman_environment.json = ..\Postman\Cowboy Challenge.postman_environment.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{278A2E93-E269-4B88-81A6-A5BC65FD59AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{278A2E93-E269-4B88-81A6-A5BC65FD59AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{278A2E93-E269-4B88-81A6-A5BC65FD59AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{278A2E93-E269-4B88-81A6-A5BC65FD59AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3366DF2D-FE9B-47A6-BFCC-1D428E254B0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3366DF2D-FE9B-47A6-BFCC-1D428E254B0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3366DF2D-FE9B-47A6-BFCC-1D428E254B0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3366DF2D-FE9B-47A6-BFCC-1D428E254B0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBA031F6-D9A4-4303-A5B2-52D1D169BD16}
+	EndGlobalSection
+EndGlobal

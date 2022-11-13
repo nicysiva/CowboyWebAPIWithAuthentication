@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "26a6d3b2-2737-44e3-bb03-243ce2838f0d",
+		"name": "Cowboy Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3746598"
+	},
+	"item": [
+		{
+			"name": "{{BaseURL}}/api/Users/CreateUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"James\",\r\n  \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Users/CreateUser",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Users",
+						"CreateUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BaseURL}}/api/Users/Authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"siva\",\r\n  \"password\": \"siva123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/Users/Authenticate",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"Users",
+						"Authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BaseURL}}/api/cowboydetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/api/cowboydetails",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"cowboydetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BaseURL}}/api/cowboydetails/2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{JWT_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseURL}}/api/cowboydetails/2",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"cowboydetails",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BaseURL}}/api/cowboydetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/cowboydetails",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"cowboydetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BaseURL}}/api/cowboydetails/2",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n   {\r\n      \"op\": \"replace\",\r\n      \"path\": \"Name\",\r\n      \"value\": \"Siva\"\r\n   }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/cowboydetails/1",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"cowboydetails",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BaseURL}}/api/cowboydetails/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/api/cowboydetails/1",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"cowboydetails",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BaseURL}}/api/CowboyDetails/FindDistanceBetweenCowboys?id1=1&id2=2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/api/CowboyDetails/FindDistanceBetweenCowboys?id1=1&id2=2",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"CowboyDetails",
+						"FindDistanceBetweenCowboys"
+					],
+					"query": [
+						{
+							"key": "id1",
+							"value": "1"
+						},
+						{
+							"key": "id2",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BaseURL}}/api/GunBulletDetails/SaveGunDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"gunName\": \"Revolver\",\r\n  \"maxNumberOfBullets\": 20\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/GunBulletDetails/SaveGunDetails",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"GunBulletDetails",
+						"SaveGunDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BaseURL}}/api/GunBulletDetails/SaveCowboyGunBulletMapping",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"cowboy_Id\": 1,\r\n    \"gun_Id\": 1,\r\n    \"bulletsLeft\": 5\r\n  },\r\n  {\r\n    \"cowboy_Id\": 1,\r\n    \"gun_Id\": 2,\r\n    \"bulletsLeft\": 10\r\n  }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/GunBulletDetails/SaveCowboyGunBulletMapping",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"GunBulletDetails",
+						"SaveCowboyGunBulletMapping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BaseURL}}/api/GunBulletDetails/ShootGun",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"cowboy_Id\": 1,\r\n    \"gun_Id\": 1\r\n  },\r\n  {\r\n    \"cowboy_Id\": 1,\r\n    \"gun_Id\": 2\r\n  }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/GunBulletDetails/ShootGun",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"GunBulletDetails",
+						"ShootGun"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BaseURL}}/api/GunBulletDetails/ReloadGun",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"cowboy_Id\": 1,\r\n    \"gun_Id\": 1\r\n  },\r\n  {\r\n    \"cowboy_Id\": 1,\r\n    \"gun_Id\": 2\r\n  }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/api/GunBulletDetails/ReloadGun",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"api",
+						"GunBulletDetails",
+						"ReloadGun"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
