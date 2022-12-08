@@ -49,6 +49,7 @@ builder.Services.AddScoped<ICowboyService, CowboyService>();
 builder.Services.AddScoped<IGunBulletService, GunBulletService>();
 builder.Services.AddScoped<IUserService, UserService>();
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

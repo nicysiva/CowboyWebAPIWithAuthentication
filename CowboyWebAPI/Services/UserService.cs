@@ -26,6 +26,13 @@ namespace CowboyWebAPI.Services
             AuthTokenResponse tokenResponse = new AuthTokenResponse();
             try
             {
+                string strmsg = string.Empty;
+                byte[] encode = new byte[userCred.password.Length];
+                encode = Encoding.UTF8.GetBytes(userCred.password);
+                strmsg = Convert.ToBase64String(encode);
+
+                userCred.password = strmsg;
+
                 var user = await this._context.Users.FirstOrDefaultAsync(item => item.UserName == userCred.username && item.Password == userCred.password);
                 if (user == null)
                 {
@@ -68,6 +75,13 @@ namespace CowboyWebAPI.Services
             ResponseModel model = new ResponseModel();
             try
             {
+                string strmsg = string.Empty;
+                byte[] encode = new byte[users.Password.Length];
+                encode = Encoding.UTF8.GetBytes(users.Password);
+                strmsg = Convert.ToBase64String(encode);
+
+                users.Password = strmsg;
+
                 _context.Users.Add(users);
                 await _context.SaveChangesAsync();
                 model.Messsage = "Record Inserted Successfully";
